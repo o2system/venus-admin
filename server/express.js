@@ -12,7 +12,7 @@ import express from "express";
 
 const server = express();
 const webpack = require("webpack");
-const config = require("../../config/webpack.dev.js");
+const config = require("../config/webpack.dev.js");
 const compiler = webpack(config)
 
 const webpackDevMiddleware = require("webpack-dev-middleware")(

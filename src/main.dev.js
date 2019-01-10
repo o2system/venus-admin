@@ -9,16 +9,17 @@
  */
 // ------------------------------------------------------------------------
 
-require("babel-runtime/regenerator");
-require("babel-register");
-require("webpack-hot-middleware/client?reload=true");
-require('o2system-venus-ui');
-require("./main.scss");
-require("./index.html");
+// require("@babel/runtime");
+import "@babel/polyfill";
+import "@babel/register";
+import "webpack-hot-middleware/client?reload=true";
+import { Venus } from 'o2system-venus-ui';
+import "./main.scss";
+import "./index.html";
 
 import VenusAdmin from './VenusAdmin';
 
 /**
  * VenusAdmin Object
  */
-module.exports = new VenusAdmin();
+export default new VenusAdmin();

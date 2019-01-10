@@ -9,7 +9,7 @@
  */
 // ------------------------------------------------------------------------
 
-import $ from "jquery";
+import $ from 'jquery';
 import metisMenu from 'metismenu';
 import niceScroll from 'nicescroll';
 import Swal from 'sweetalert2';
@@ -21,13 +21,13 @@ class VenusAdmin {
     constructor() {
         window.$ = window.jQuery = $;
 
-        var sidebarLeftScroll = $('.sidebar-left').niceScroll({
+        let sidebarLeftScroll = $('.sidebar-left').niceScroll({
             cursorcolor: "#fff",
             cursoropacitymax: 0.5,
             cursorwidth: "3px"
         });
 
-        var dropdownItemList = $('.dropdown-item-list').niceScroll({
+        let dropdownItemList = $('.dropdown-item-list').niceScroll({
             cursorcolor: "#333",
             cursoropacitymax: 0.5,
             cursorwidth: "3px",
@@ -80,4 +80,4 @@ class VenusAdmin {
     }
 }
 
-module.exports = VenusAdmin;
+export default VenusAdmin;

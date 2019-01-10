@@ -9,8 +9,8 @@
  */
 // ------------------------------------------------------------------------
 
-require('o2system-venus-ui');
-require("main.scss");
+import Venus from 'o2system-venus-ui';
+import "main.scss";
 
 import VenusAdmin from './VenusAdmin';
 
