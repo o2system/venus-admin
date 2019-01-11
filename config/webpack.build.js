@@ -19,8 +19,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = merge(common, {
 	mode: "production",
 	entry: {
-		"venus-ui": "./src/main.js",
-		"venus-ui.min": "./src/main.js"
+		"venus-admin": "./src/main.js",
+		"venus-admin.min": "./src/main.js"
 	},
 	output: {
 		filename: "[name].js",
