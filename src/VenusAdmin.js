@@ -11,7 +11,6 @@
 
 import $ from 'jquery';
 import metisMenu from 'metismenu';
-import niceScroll from 'nicescroll';
 import Swal from 'sweetalert2';
 import toastr from 'toastr';
 /**

@@ -13,7 +13,7 @@
 import "@babel/polyfill";
 import "@babel/register";
 import "webpack-hot-middleware/client?reload=true";
-import { Venus } from 'o2system-venus-ui';
+import { VenusUi } from 'o2system-venus-ui';
 import "./main.scss";
 import "./index.html";
 

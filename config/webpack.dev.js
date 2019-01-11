@@ -15,6 +15,8 @@ const common = require('./webpack.common.js');
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = merge(common, {
     mode: "development",
@@ -23,25 +25,32 @@ module.exports = merge(common, {
     },
     output: {
         filename: "[name].js",
-        path: path.resolve(__dirname, "../dev"),
+        path: path.resolve(process.cwd(), "dev"),
         publicPath: "/"
     },
     devServer: {
-            contentBase: "dev",
-            overlay: true,
-            stats: {
-                colors: true
-            }
-        },
+        hot: true,
+        open: true,
+        historyApiFallback: true,
+        contentBase: "dev",
+        overlay: true,
+        stats: {
+            colors: true
+        }
+    },
     devtool: "source-map",
     module: {
         rules: [
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
+                    { loader: "style-loader"},
+                    { loader: "css-loader"},
+                    {
+                        loader: "postcss-loader",
+                        options: {config: {path: 'config/postcss.config.js'}}
+                    },
+                    { loader: "sass-loader" },
                 ],
             },
             {
@@ -61,7 +70,8 @@ module.exports = merge(common, {
             chunkFilename: "[id].css"
         }),
         new HTMLWebpackPlugin({
+            title: "O2System Venus Admin UI",
             template: "./src/index.html"
-        })
+        }), // Generates default index.html
     ]
 });
