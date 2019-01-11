@@ -16,6 +16,7 @@ import "webpack-hot-middleware/client?reload=true";
 import { VenusUi } from 'o2system-venus-ui';
 import "./main.scss";
 import "./index.html";
+import "./login.html";
 
 import VenusAdmin from './VenusAdmin';
 

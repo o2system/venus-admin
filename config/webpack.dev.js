@@ -46,10 +46,7 @@ module.exports = merge(common, {
                 use: [
                     { loader: "style-loader"},
                     { loader: "css-loader"},
-                    {
-                        loader: "postcss-loader",
-                        options: {config: {path: 'config/postcss.config.js'}}
-                    },
+                    
                     { loader: "sass-loader" },
                 ],
             },
@@ -73,5 +70,11 @@ module.exports = merge(common, {
             title: "O2System Venus Admin UI",
             template: "./src/index.html"
         }), // Generates default index.html
+
+        new HTMLWebpackPlugin({
+            title: "O2System Venus Admin UI",
+            template: "./src/login.html",
+            filename: "login.html"
+        }), // Generates default login.html
     ]
 });

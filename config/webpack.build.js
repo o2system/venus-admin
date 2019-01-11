@@ -19,8 +19,8 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = merge(common, {
 	mode: "production",
 	entry: {
-		"venus-admin": "./src/main.js",
-		"venus-admin.min": "./src/main.js"
+		"venus-ui": "./src/main.js",
+		"venus-ui.min": "./src/main.js"
 	},
 	output: {
 		filename: "[name].js",
@@ -32,17 +32,9 @@ module.exports = merge(common, {
 			test: /\.(sa|sc|c)ss$/,
 			use: [
 				MiniCssExtractPlugin.loader,
-				"style-loader",
 				{
 					loader: "css-loader",
 					options: {importLoaders: 1, sourceMap: true},
-				},
-				{loader: 'postcss-loader',
-					options: {
-						config: {
-							path: path.resolve(__dirname, 'postcss.config.js')
-						}
-					}
 				},
 				'sass-loader',
 
