@@ -11,10 +11,6 @@
 
 import VenusUi from 'o2system-venus-ui';
 import "./main.scss";
+import Admin from './Admin';
 
-import VenusAdmin from './VenusAdmin';
-
-/**
- * Venus Object
- */
-module.exports = new VenusAdmin();
+export default new Admin;

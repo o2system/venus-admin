@@ -18,9 +18,9 @@ import "./main.scss";
 import "./index.html";
 import "./login.html";
 
-import VenusAdmin from './VenusAdmin';
+import Admin from './Admin';
 
 /**
  * VenusAdmin Object
  */
-export default new VenusAdmin();
+export default new Admin;
