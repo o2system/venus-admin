@@ -144,9 +144,14 @@
 					}
 
 					.submenu{
+						display: none;
 						li{
 							a{
 								padding: 8px 10px;
+							}
+
+							.submenu{
+								display: none;
 							}
 						}
 					}
@@ -192,7 +197,14 @@
 						    		&:hover{
 						    			background-color: darken($primary, 10%);
 						    		}
-						    	}
+								}
+
+								&:hover{
+									.submenu{
+										display: block;
+									}
+								}
+								
 						    }
 
 						    > li{
