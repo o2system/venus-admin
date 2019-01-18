@@ -14,6 +14,7 @@ import Swal from 'sweetalert2';
 import toastr from 'toastr';
 import Sidebar from './Partials/Sidebar';
 import DropdownWithScrollBar from './Components/DropdownWithScrollBar';
+import './Admin.scss';
 
 /**
  * Class Admin
