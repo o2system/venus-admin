@@ -32,6 +32,8 @@ export default class DropdownWithScrollBar {
             autohidemode: false,
         });
 
+        elementItemsList.hide();
+
         element.on("shown.bs.dropdown", function (e) {
             elementItemsList.show().resize();
         });
