@@ -19,10 +19,27 @@ import metismenu from 'metismenu';
  */
 export default class Sidebar {
     constructor() {
+        let menu = $('.sidebar-menu > ul');
+        let trigger = document.createElement('span');
+        trigger = $(trigger).addClass('trigger-submenu');
+
+        menu.find('.has-submenu > .submenu').before(trigger);
+
         /**
          * Add metis menu effect
          */
-        $('.sidebar-menu > ul').metisMenu();
+        menu.metisMenu({
+            toggle: true,
+            preventDefault: true,
+            triggerElement: '.trigger-submenu', 
+            parentTrigger: 'li',
+            subMenu: 'ul'
+        });
+
+        
+        
+
+        
     };
 
     toggle() {

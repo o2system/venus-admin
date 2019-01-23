@@ -44,6 +44,7 @@
 
 		.logo-mini{
 			display: none;
+			width: 60px;
 
 			@include device(tablet) {
 				display: block;
