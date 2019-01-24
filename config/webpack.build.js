@@ -25,7 +25,7 @@ module.exports = merge(common, {
 	output: {
 		filename: "[name].js",
 		path: path.resolve(process.cwd(), "dist"),
-		publicPath: "/"
+		// publicPath: "/"
 	},
 	module: {
 		rules: [{
