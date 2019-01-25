@@ -67,6 +67,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "flag-icon-css": "^3.2.1",
     "metismenu": "^3.0.3",
     "o2system-venus-ui": "git+https://github.com/o2system/venus-ui.git",
     "sweetalert2": "^7.33.1",
