@@ -8,7 +8,7 @@
  * @copyright      Copyright (c) Steeve Andrian Salim
  */
 // ------------------------------------------------------------------------
-
+import Form from 'o2system-venus-form';
 import $ from 'jquery';
 import Swal from 'sweetalert2';
 import toastr from 'toastr';
