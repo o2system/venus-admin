@@ -28,7 +28,3 @@
 		font-size: 16px;
 	}
 }
-
-.avatar{
-	@include avatar(100px, $bg-color: $primary, $radius: 50%);
-}

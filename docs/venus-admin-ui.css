@@ -25086,23 +25086,6 @@ button.toast-close-button {
   margin-bottom: 0;
   font-size: 16px;
 }
-.venus-admin .avatar {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  flex: 0 0 100px;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  border: 1px solid #ddd;
-  background-color: #E38552;
-  position: relative;
-  background-color: #E38552;
-}
-.venus-admin .avatar img {
-  width: 100%;
-  height: auto;
-}
 .venus-admin.venus-auth {
   min-height: 100vh;
   padding: 2rem 0;
