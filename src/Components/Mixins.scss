@@ -34,14 +34,7 @@
     border: 1px solid #ddd;
     background-color: $bg-color;
     position: relative;
-  
-    @if $radius != 50% {
-        border-radius: $radius;
-    }
-
-    @if $bg-color != #fff {
-        background-color: $bg-color;
-    }
+    border-radius: $radius;
 
     img{
         width: 100%;
@@ -62,12 +55,5 @@
     position: relative;
     font-size: $font-size;
     color: $color;
-  
-    @if $radius != 0 {
-        border-radius: $radius;
-    }
-
-    @if $bg-color != #fff {
-        background-color: $bg-color;
-    }
+    border-radius: $radius;
 }
