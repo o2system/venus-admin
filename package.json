@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "O2System Admin Interface Framework",
   "homepage": "https://venus.o2system.id/admin",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "npm run dev",
     "build": "webpack --config=config/webpack.build.js",
@@ -71,6 +71,7 @@
   "dependencies": {
     "flag-icon-css": "^3.2.1",
     "metismenu": "^3.0.3",
+    "o2system-venus-form": "git+https://github.com/o2system/venus-form.git",
     "o2system-venus-ui": "git+https://github.com/o2system/venus-ui.git",
     "sweetalert2": "^7.33.1",
     "toastr": "^2.1.4"

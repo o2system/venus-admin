@@ -9,7 +9,6 @@
  */
 // ------------------------------------------------------------------------
 
-import UserInterface from 'o2system-venus-ui';
 import Admin from './Admin';
 
 export default new Admin;
