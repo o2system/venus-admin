@@ -8,16 +8,28 @@
 	flex-grow: 1;
 
 	.header-left{
-		background-color: $primary;
+		background-color: $sidebar-dark;
 		text-align: center;
 		height: 60px;
-		position: relative;
 		width: 240px;
-		z-index: 1;
 		transition: all 0.3s;
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: fixed;
+		z-index: 10;
+
+		&.expand-logo{
+			width: 240px;
+
+			.logo-large{
+				display: block;
+			}
+
+			.logo-mini{
+				display: none;
+			}
+		}
 
 		@include device(tablet) {
 			width: 60px;
@@ -63,6 +75,17 @@
 
 	.header-right{
 		flex: 1 1 auto;
+		margin-left: 240px;
+		transition: all 0.3s;
+		
+		@include device(tablet) {
+			margin-left: 60px;
+		}
+
+		@include device(mobile) {
+			margin-left: 60px;
+		}
+
 		.navbar{
 			background-color: $white;
 			border-radius: 0;
@@ -125,6 +148,22 @@
 								display: none;
 							}
 						}
+
+						&.toolbar{
+							width: 40px;
+							height: 40px;
+							border: 1px solid #ddd;
+							border-radius: 50%;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							padding: 0 !important;
+							margin: 0 5px;
+					
+							&:hover{
+								background-color: #ddd !important;;
+							}
+						}
 					}
 
 					.notify {
@@ -171,8 +210,9 @@
 					}
 				}
 				.dropdown-menu{
-					/* position: absolute;
-					padding: 4px 0;
+					overflow: hidden;
+					position: absolute;
+					/* padding: 4px 0;
 					box-shadow: 0 0 1.25rem rgba(108,118,134,.1);
 					border-color: #eff3f6;
 					font-size: 14px;
@@ -237,7 +277,7 @@
 					} */
 
 					.dropdown-item-list{
-						height: 200px;
+						max-height: 200px;
 						overflow: hidden;
 						.dropdown-item{
 							display: flex;
@@ -312,6 +352,39 @@
 			.logo-mini{
 				display: block;
 			}
+
+			&.expand-logo{
+				width: 240px;
+	
+				.logo-large{
+					display: block;
+				}
+	
+				.logo-mini{
+					display: none;
+				}
+			}
 		}
+
+		.header-right{
+			margin-left: 60px;
+			transition: all 0.3s;
+		}
+	}
+}
+
+&.open-sidebar-left{
+	.header{
+		// .header-left{
+		// 	width: 240px;
+		
+		// 	.logo-large{
+		// 		display: block;
+		// 	}
+	
+		// 	.logo-mini{
+		// 		display: none;
+		// 	}
+		// }
 	}
 }

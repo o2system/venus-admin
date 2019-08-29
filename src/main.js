@@ -11,4 +11,4 @@
 
 import Admin from './Admin';
 
-export default new Admin;
+export default Admin;

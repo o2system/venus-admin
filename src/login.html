@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>O2System Venus UI</title>
+    <title>O2System Venus Admin UI</title>
 </head>
 
 <body class="venus-admin venus-auth">
@@ -15,38 +15,42 @@
                     <div class="card-body">
                         <div class="logo text-center">
                             <a href="javascript:void(0);">
-                                <img src="assets/img/logo/color.png">
+                                <img src="./assets/img/logo/logo-color.png">
                             </a>
                         </div>
-                        <form>
+                        <div class="alert align-items-center d-none" role="alert">
+                            <div class="alert-message"></div>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">
+                                    <i class="fas fa-times"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <form id="form-login" action="<?=base_url('login/authenticate');?>" method="post">
                             <div class="form-group">
                                 <label for="username">Username</label>
-                                <input type="text" class="form-control" id="username" placeholder="Enter username">
+                                <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
                             </div>
                             <div class="form-group">
-                                <label for="userpassword">Password</label>
-                                <input type="password" class="form-control" id="userpassword" placeholder="Enter password">
-                            </div>
-    
-                            <div class="row align-items-center">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="customControlInline">
-                                            <label class="custom-control-label" for="customControlInline">Remember me</label>
-                                        </div>
-                                    </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <label for="userpassword">Password</label>
+                                    <label>
+                                        <a href="javascript:void(0);" class="text-primary">
+                                            Forgot your password?
+                                        </a>
+                                    </label>
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group text-right">
-                                        <button class="btn btn-primary" type="submit">Log In</button>
-                                    </div>
-                                </div>
+                                <input type="password" class="form-control" name="password" id="userpassword" placeholder="Enter password">
                             </div>
-                            <div class="form-group text-center">
-                                <a href="javascript:void(0);" class="text-muted">
-                                    <i class="fas fa-lock"></i> Forgot your password?
-                                </a>
+                            <div class="form-group pt-2">
+                                <button class="btn btn-primary btn-block" type="submit">
+                                    <span class="text" role="btn-text">Log In</span>
+                                    <span class="btn-loading d-none" role="btn-preloader">
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                        <span class="dot"></span>
+                                    </span>
+                                </button>
                             </div>
                         </form>
                     </div>
