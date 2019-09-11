@@ -10,6 +10,7 @@
 // ------------------------------------------------------------------------
 
 import $ from "jquery";
+import metismenu from 'metismenu';
 
 /**
  * Class Sidebar
@@ -18,69 +19,42 @@ import $ from "jquery";
  */
 export default class Sidebar {
     constructor() {
-        //Multilevel
-        $(function() {
-            "use strict";
-            let url = window.location + "";
-            let path = url.replace(window.location.protocol + "//" + window.location.host + "/", "");
-            let element = $('ul#sidebarnav a').filter(function() {
-                return this.href === url || this.href === path;// || url.href.indexOf(this.href) === 0;
-            });
+        let menu = $('.sidebar-menu > ul');
+        let trigger = document.createElement('span');
+        trigger = $(trigger).addClass('trigger-submenu');
 
-            element.parentsUntil(".sidebar-nav").each(function (index){
-                if($(this).is("li") && $(this).children("a").length !== 0)
-                {
-                    $(this).children("a").addClass("active");
-                    $(this).parent("ul#sidebarnav").length === 0
-                        ? $(this).addClass("active")
-                        : $(this).addClass("selected");
-                }
-                else if(!$(this).is("ul") && $(this).children("a").length === 0)
-                {
-                    $(this).addClass("selected");
-                    
-                }
-                else if($(this).is("ul")){
-                    $(this).addClass('in');
-                }
-                
-            });
+        menu.find('.has-submenu > .submenu').before(trigger);
 
-            element.addClass("active"); 
-            $('#sidebarnav a').on('click', function (e) {
-                
-                    if (!$(this).hasClass("active")) {
-                        // hide any open menus and remove all other classes
-                        $("ul", $(this).parents("ul:first")).removeClass("in");
-                        $("a", $(this).parents("ul:first")).removeClass("active");
-                        
-                        // open our new menu and add the open class
-                        $(this).next("ul").addClass("in");
-                        $(this).addClass("active");
-                        
-                    }
-                    else if ($(this).hasClass("active")) {
-                        $(this).removeClass("active");
-                        $(this).parents("ul:first").removeClass("active");
-                        $(this).next("ul").removeClass("in");
-                    }
-            })
-            $('#sidebarnav >li >a.has-arrow').on('click', function (e) {
-                e.preventDefault();
-            });
-            
+        /**
+         * Add metis menu effect
+         */
+        menu.metisMenu({
+            toggle: true,
+            preventDefault: true,
+            triggerElement: '.trigger-submenu', 
+            parentTrigger: 'li',
+            subMenu: 'ul'
         });
 
-        $(".sidebar-left").hover(function(){
-            $(".header-left").addClass("expand-logo")
-        },function(){
-            $(".header-left").removeClass("expand-logo")
-        });
+        
+        
+
+        
     };
 
     toggle() {
         const leftSidebar = $('.sidebar-left');
         const leftSidebarToggle = $('[data-toggle="sidebar-left"]');
+        const leftSidebarScrollOptions = {
+            cursorcolor: "#fff",
+            cursoropacitymax: 0.5,
+            cursorwidth: "3px"
+        };
+
+        /**
+         * Adding nicescroll effect to the left sidebar
+         */
+        leftSidebar.niceScroll(leftSidebarScrollOptions);
 
         if ($(window).width() < 991) {
             $('.venus-admin').removeClass('mini-sidebar-left');
@@ -90,6 +64,16 @@ export default class Sidebar {
         } else {
             leftSidebarToggle.on('click', function () {
                 $('.venus-admin').toggleClass('mini-sidebar-left');
+
+                if ($('.venus-admin').hasClass('mini-sidebar-left')) {
+                    leftSidebar.getNiceScroll().remove();
+                } else {
+                    leftSidebar.css('overflow', 'visible');
+                    setTimeout(function () {
+                        leftSidebar.css('overflow', 'hidden');
+                        leftSidebar.niceScroll(leftSidebarScrollOptions);
+                    }, 300);
+                }
             });
         }
     }

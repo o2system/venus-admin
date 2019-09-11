@@ -24,17 +24,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="javascript:void(0);" data-toggle="sidebar-left"><i class="fas fa-bars"></i></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link toolbar" href="javascript:history.go(-1)" data-toggle="tooltip" data-original-title="Go Back"><i class="fas fa-arrow-left"></i></a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link toolbar" href="javascript:history.forward()" data-toggle="tooltip" data-original-title="Go Forward"><i class="fas fa-arrow-right"></i></a>
-                        </li>
-        
-                        <li class="nav-item">
-                            <a class="nav-link toolbar" href="javascript:location.reload()" data-toggle="tooltip" data-original-title="Reload"><i class="fas fa-sync-alt"></i></a>
-                        </li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
@@ -59,7 +48,7 @@
                                 <div class="dropdown-item-header">
                                     <p>Notification (3)</p>
                                 </div>
-                                <div class="dropdown-item-list perfect-scrollbar">
+                                <div class="dropdown-item-list">
                                     <a href="#" class="dropdown-item">
                                         <span class="icon bg-primary">
                                             <i class="fas fa-cart-plus"></i>
@@ -144,135 +133,76 @@
 
     </header>
     <aside class="sidebar-left">
-        <!-- Sidebar scroll-->
-        <div class="scroll-sidebar perfect-scrollbar">
-            <!-- Sidebar navigation-->
-            <nav class="sidebar-nav">
-                <ul id="sidebarnav">
-                    <li class="nav-small-cap">
-                        <i class="fas fa-cubes"></i>
-                        <span class="hide-menu">Personal</span>
-                    </li>
-                    <li class="sidebar-item selected">
-                        <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                            <i class="fas fa-cubes"></i>
-                            <span class="hide-menu">Multi level dd</span>
+        <div class="sidebar-menu">
+            <ul>
+                <li class="menu-title">
+                    Main
+                </li>
+                <li class="has-submenu">
+                    <div class="item-wrapper">
+                        <a href="#">
+                            <span>
+                                <i class="fas fa-tachometer-alt"></i> <span class="hide">Dashboard</span></span>
+                            </span>
+                            <span class="badge badge-success">3</span>
                         </a>
-                        <ul aria-expanded="false" class="collapse first-level">
-                            <li class="sidebar-item">
-                                <a href="javascript:void(0)" class="sidebar-link">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu"> item 1.1</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="javascript:void(0)" class="sidebar-link">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu"> item 1.2</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a class="has-arrow sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu">Menu 1.3</span>
-                                </a>
-                                <ul aria-expanded="false" class="collapse second-level">
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.1</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.3</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.4</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="javascript:void(0)" class="sidebar-link">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu"> item 1.4</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-        
-                    <li class="sidebar-item">
-                        <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
-                            <i class="fas fa-cubes"></i>
-                            <span class="hide-menu">Multi level dd</span>
+                        <a class="sidebar-button" href="#">Add</a>
+                    </div>
+
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="#">Submenu 1</a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Submenu 1.1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Submenu 2.1</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Submenu 2</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="menu-title">
+                    Main
+                </li>
+                <li class="has-submenu">
+                    <div class="item-wrapper">
+                        <a href="#aaa">
+                            <span>
+                                <i class="fas fa-tachometer-alt"></i> <span class="hide">Dashboard</span></span>
+                            </span>
+                            <span class="badge badge-success">3</span>
                         </a>
-                        <ul aria-expanded="false" class="collapse first-level">
-                            <li class="sidebar-item">
-                                <a href="javascript:void(0)" class="sidebar-link">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu"> item 1.1</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="javascript:void(0)" class="sidebar-link">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu"> item 1.2</span>
-                                </a>
-                            </li>
-                            <li class="sidebar-item">
-                                <a class="has-arrow sidebar-link" href="javascript:void(0)" aria-expanded="false">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu">Menu 1.3</span>
-                                </a>
-                                <ul aria-expanded="false" class="collapse second-level">
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.1</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.2</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.3</span>
-                                        </a>
-                                    </li>
-                                    <li class="sidebar-item">
-                                        <a href="javascript:void(0)" class="sidebar-link">
-                                            <i class="fas fa-cubes"></i>
-                                            <span class="hide-menu"> item 1.3.4</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="sidebar-item">
-                                <a href="javascript:void(0)" class="sidebar-link">
-                                    <i class="fas fa-cubes"></i>
-                                    <span class="hide-menu"> item 1.4</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+                        <a class="sidebar-button" href="#add">Add</a>
+                    </div>
+
+                    <ul class="submenu">
+                        <li class="has-submenu">
+                            <a href="#">Submenu 1</a>
+
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#">Submenu 1.1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Submenu 2.1</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Submenu 2</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
         </div>
+
     </aside>
     <main class="main">
         <div class="container-fluid">
@@ -308,70 +238,9 @@
             <div class="row">
                 <div class="col-12">
                     <div class="card">
-                        <div class="card-header pb-0">
-                            <form action="<?=current_url();?>">
-                                <div class="form-row align-items-center">
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Entries</span>
-                                                </div>
-                                                <select name="entries" class="form-control custom-select">
-                                                    <option>10</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Period</span>
-                                                </div>
-                                                <input class="form-control input-daterange-datepicker" type="text" name="period" value="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" placeholder="Keyword" value="" name="keyword">
-                                        </div>
-                                    </div>
-                                    <div class="col-md text-right">
-                                        <div class="form-group">
-                                            <button class="btn btn-primary" type="submit">Filter</button>
-                                            <a class="btn btn-default" href="#">Reset</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <h5 class="card-header">Datatables</h5>
+                        <h5 class="card-header">Hallo Admin</h5>
                         <div class="card-body">
-                            <table class="table table-bordered table-striped datatables-basic">
-                                <thead>
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Name</th>
-                                        <th>Company</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Teguh</td>
-                                        <td>Circle Creative</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Rianto</td>
-                                        <td>Circle Creative</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <h1>Hehehe</h1>
                         </div>
                     </div>
                 </div>

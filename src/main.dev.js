@@ -9,6 +9,15 @@
  */
 // ------------------------------------------------------------------------
 
+// require("@babel/runtime");
+import "@babel/polyfill";
+import "webpack-hot-middleware/client?reload=true";
+import "./index.html";
+import "./login.html";
+
 import Admin from './Admin';
 
+/**
+ * VenusAdmin Object
+ */
 export default new Admin;
