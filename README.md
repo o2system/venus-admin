@@ -1,15 +1,8 @@
-<div align="center" markdown="1">
-
-[![O2System Framework](http://o2system.id/assets/img/logo/logo-white-200px.png?logo)](http://o2system.id)
-</div>
-
-<div align="center" markdown="1">
+[![O2System Framework](http://o2system.id/assets/img/logo/logo-200px.png?logo)](http://o2system.id)
 
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/o2system/venus-admin/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/o2system/venus-admin/?branch=master)
 [![Build Status](https://scrutinizer-ci.com/g/o2system/venus-admin/badges/build.png?b=master)](https://scrutinizer-ci.com/g/o2system/venus-admin/build-status/master)
 ![License](https://img.shields.io/github/license/o2system/venus-admin.svg)
-
-</div>
 
 # O2System Venus
 Open-source user interface framework based on jQuery and bootstrap. The new generation of Progressive Web Application (PWA)UI-Framework.
